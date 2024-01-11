@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'magraregular';
+    src: url('Magra-Regular-webfont.eot');
+    src: url('Magra-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Magra-Regular-webfont.woff2') format('woff2'),
+         url('Magra-Regular-webfont.woff') format('woff'),
+         url('Magra-Regular-webfont.ttf') format('truetype'),
+         url('Magra-Regular-webfont.svg#magraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

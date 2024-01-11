@@ -1,0 +1,521 @@
+body {
+    margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Magra', sans-serif;
+    background-image:url(images/universebg.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+	color: #EDC771;
+	text-transform: uppercase;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row: 1fr 3fr 1fr;
+}
+
+header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    height: 70%;
+    background: linear-gradient(#0f1224 20%, #1B203D 80%);
+    text-align: center;
+    letter-spacing: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.title {
+    grid-row: 1 / 1;
+    grid-column: 2 / 3;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: url(images/universebg.png);
+    color: transparent;
+    font-size: 250%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    grid-row: 3 / 3;
+    grid-column: 2 / 3;
+}
+
+.navlink {
+    color: #EDC771;  
+}
+
+.icons {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    color: #EDC771;  
+}
+
+.searchcontainer {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+
+.searchbar {
+    margin: 2%;
+    background-color: #EDC771;
+    width: 200px;
+    height: 33px;
+    border-radius: 10px;
+    border: none;
+} 
+
+/* HOME PAGE */
+
+.mainindex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+}
+
+.ibuttoncontainer {
+    background: whitesmoke;
+    width:fit-content;
+    height: max-content;
+    padding: 150px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-button {
+    border-color: #0f1224;
+    border-style: dotted;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* GAMES PAGE */
+
+#errorMessage,
+#loader {
+  text-align: center;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px; 
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  #errorMessage,
+  #loader {
+    width: 70%;
+    max-width: 600px; 
+}
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.product-container {
+  background-color: white;
+  color: #1B203D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.product-container img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+}
+
+.product-container p {
+  background-color: white;
+}
+
+.product-container a {
+  padding: 40px;
+}
+
+.buttoncontainer a {
+  background-color: #1B203D;
+  color: #EDC771;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 40px;
+  text-decoration: none;
+}
+
+.button {
+  background-color: #1B203D;
+  color: #EDC771;
+  border-radius: 15px;
+  border: #1B203D;
+  text-decoration: none;
+  height: 70px;
+  width: 150px;
+  margin: 20px;
+}
+
+a:hover {
+  color: #EDC771;
+}
+
+.button:hover {
+  background-color: #EDC771;
+  color: #1B203D;
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* PRODUCT PAGE */
+
+.productcontainer {
+    background-color: white;
+    color: #1B203D;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    margin: 15%;
+    padding-top: 5%;
+}
+
+.productcontainer img {
+    max-width: 50%;
+    max-height: 10%;
+    border-radius: 15px;
+    box-shadow: #1B203D;
+  }
+
+/* CART PAGE */
+
+.cart-main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-wrapper {
+    background-color: #1B203D;
+    display: flex;
+    margin: 2em 0;
+    border-radius: 20px;
+}
+
+
+.review {
+    color:#1B203D;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 0;
+    margin: 2%;
+    opacity: 0.8;
+    flex: 1;
+
+}
+
+#headline-product {
+    font-size: 15px;
+}
+
+#orderimg {
+    height: 50%;
+    width: 60%;
+    margin-top: 0px;
+    margin-left: 90px;
+}
+
+.total {
+    border-top:#1B203D solid;
+    margin-top: 150px;
+    padding: 10px;
+    line-height: 2;
+
+}
+
+.payment {
+    opacity: 0.8;
+    color:#1B203D;
+    background-color: whitesmoke;
+    position: sticky;
+    border-radius: 15px;
+    font-size: 13px;
+    margin: 2%;
+    flex: 1;
+}
+
+.radioform {
+    padding: 0;
+    margin: 10%;
+}
+
+.card-details {
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+ }
+
+
+#card, #klarna, #paypal  {
+    margin: 2%;
+}
+
+.continue { 
+    padding:1em 2em;
+    margin: 5%;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color:#1B203D;
+    background-color: #EDC771;
+    text-decoration: none;
+    text-align: center;
+}
+
+.proceed {
+    padding: 1em 2em;
+    margin: 5%;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color:#EDC771;
+    background-color:#1B203D;
+}
+
+
+.cvc, .expiration, .cardnumb, .cardholdername {
+    display: flex;
+
+}
+
+.cardholdername :nth-child(1) {
+    flex: 1;
+}
+
+.cardholdername :nth-child(2) {
+    flex: 2;
+    border-radius: 10px;
+}
+
+.cardnumb :nth-child(1) {
+    flex: 1;
+}
+
+.cardnumb :nth-child(2) {
+    flex: 2;
+    border-radius: 10px;
+}
+
+.expiration :nth-child(1) {
+    flex: 1
+}
+
+.expiration :nth-child(2) {
+    flex: 2;
+    border-radius: 10px;
+}
+
+.cvc :nth-child(1) {
+    flex: 1;
+}
+
+.cvc :nth-child(2) {
+    flex: 2;
+    border-radius: 10px;
+}
+
+#headline-payment, #headline-review {
+    padding: 20px;
+    margin: 0px;
+    border-bottom: solid #1B203D;
+    font-size: 18px;
+    text-align: center;
+}
+
+#headline-product {
+    padding: 20px;
+    margin: 0px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* SUCCESS PAGE */
+
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success {
+    background-color: #1B203D;
+    color: whitesmoke;
+    width: 600px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 2em 0;
+
+}
+
+.here {
+    color: #EDC771;
+    text-decoration: none;
+}
+
+#check {
+    margin: 2em;
+}
+
+
+/* ABOUT PAGE */
+
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+#about {
+    width: 60%;
+    height: auto;
+    background-color:#1B203D;
+    border-radius: 15px;
+    padding:15px;
+    text-align: center;
+    line-height: 2;
+    color: #EDC771;
+
+}
+
+  /* CONTACT PAGE */
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    background-color:#1B203D;
+    width: 500px;
+    height: 400px;
+    border-radius: 5em;
+    padding-left: 12cqb;
+    padding-top: 2em;
+  
+}
+
+fieldset {
+    border:1em;
+}
+
+#message {
+    height: 100px;
+    width: 300px;
+    text-transform: bold;
+}
+
+#email {
+    height: auto;
+    width: 300px;
+}
+
+#name {
+    height: auto;
+    width: 300px;
+}
+
+#name, #email, #message {
+    display: flex;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0.2;
+}
+
+#send {
+    background-color:#EDC771;
+    color:#1B203D;
+    text-align: center;
+    border-radius: 15px;
+    margin: 10%;
+    width: 250px;
+    height: 40px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    color: #EDC771;
+    background-color: #1B203D;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    grid-area: footer;
+}
+
+#Aboutus,
+#Contact {
+    margin: 0 1em;
+    color: #EDC771;
+    text-decoration: none;
+}
+
+/* @MEDIA */
+
+@media (max-width: 500px) {
+    .vr-txt-container a {
+        padding: 0.5em 1em;
+        font-size: 16px;
+    }
+
+   .spiderverse a {
+    font-size: 16px;
+    padding: 0.5em 1em;
+}
+
+.newscontainer {
+    grid-template-rows: min-content 600px;
+}
+
+.success {
+    width: 300px;
+} 
+ }
+
+@media (min-width: 501px) and (max-width: 700px) {
+    .success {
+        width: 400px;
+    }   
+}
+
+@media (max-width: 800px) {
+    .Equipment, .Outlet {
+        display: none;
+    }
+}
