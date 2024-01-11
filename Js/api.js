@@ -1,11 +1,24 @@
-export const baseUrl =
-  "http://cms-ca.kristinebjorgan.com/wp-json/wc/store/products";
+// Function to get the full API URL with the appropriate protocol
+function getFullApiUrl() {
+  const baseUrlWithoutProtocol =
+    "//cms-ca.kristinebjorgan.com/wp-json/wc/store/products";
+  if (window.location.protocol === "https:") {
+    return `https:${baseUrlWithoutProtocol}`;
+  } else {
+    return `http:${baseUrlWithoutProtocol}`;
+  }
+}
 
-//GENERATE PRODUCTS ON GAMES.HMTML
+// Use the function to set the base URL
+export const baseUrl = getFullApiUrl();
+
+// The rest of your code remains unchanged
+// ...
+
+//GENERATE PRODUCTS ON GAMES.HTML
 export async function fetchData() {
   try {
     const response = await fetch(baseUrl);
-
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -20,6 +33,7 @@ export async function fetchData() {
     throw error;
   }
 }
+
 //FETCHING SINGLE PRODUCT
 export async function fetchProduct(productId) {
   try {
