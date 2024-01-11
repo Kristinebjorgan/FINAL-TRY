@@ -12,8 +12,6 @@ function getFullApiUrl() {
 // Use the function to set the base URL
 export const baseUrl = getFullApiUrl();
 
-// The rest of your code remains unchanged
-// ...
 
 //GENERATE PRODUCTS ON GAMES.HTML
 export async function fetchData() {
